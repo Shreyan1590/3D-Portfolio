@@ -1,0 +1,173 @@
+/* Global reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e1f35, #232b4d);
+    overflow: hidden;
+}
+
+/* Main container */
+.main-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 3D Form Card */
+.form-card {
+    width: 400px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    transform: rotateY(25deg) rotateX(15deg);
+    transition: transform 0.7s ease;
+}
+
+.form-card:hover {
+    transform: rotateY(0deg) rotateX(0deg);
+}
+
+/* Form Header */
+.form-content h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.form-content p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+}
+
+/* Input Fields */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #fff;
+    outline: none;
+    transition: all 0.5s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #00ffcc;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 15px;
+    font-size: 0.8rem;
+    color: #00ffcc;
+}
+
+/* Glowing Button */
+.glow-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #00ffcc, #00ffff);
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background 0.5s ease, transform 0.3s ease;
+}
+
+.glow-button:hover {
+    background: linear-gradient(90deg, #00aaff, #00ffcc);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+/* Animated 3D Background */
+.animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://example.com/3d-background.png');
+    background-size: cover;
+    animation: bgAnimation 10s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+.custom-btn {
+    background-color: #cc1010;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.custom-btn:hover {
+    background-color: #134f02;
+}
+
+@keyframes bgAnimation {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        transform: translateY(-50px) scale(1.1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-card {
+        width: 90%;
+        transform: none;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My 3D Portfolio</title>
+  <link rel="stylesheet" href="main-content.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <canvas id="scene"></canvas>
+    <div class="intro">
+      <h1>Welcome to My 3D World</h1>
+      <p>Dive into my interactive portfolio with advanced 3D animations.</p>
+      <button onclick="window.location.href='explore-more.html'" class="cta">Explore More</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm a creative developer specializing in 3D design, animations, and interactive websites.</p>
+    <button onclick="window.location.href='about-us.html'" class="cta">About</button>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="projects-container">
+      <div class="project-card" data-tilt>
+        <h3>3D Modeling</h3>
+        <p>Check out my interactive 3D models and animations.</p>
+      </div>
+      <div class="project-card" data-tilt>
+        <h3>Web Animations</h3>
+        <p>Explore my advanced web animation projects with GSAP.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <button onclick="window.location.href='contact.html'" class="custom-btn">Contact</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 <strong>Shreyan's 3D Portfolio.</strong> All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script src="main-content.js"></script>
+</body>
+</html>

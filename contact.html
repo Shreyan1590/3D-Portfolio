@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced 3D Contact Form</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="form-card">
+            <div class="form-content">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you!</p>
+                <form id="contactForm">
+                    <div class="input-group">
+                        <input type="text" name="name" id="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" id="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="message" id="message" rows="4" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="glow-button">Send Message</button>
+
+                    <button onclick="window.location.href='main-content.html'" class="custom-btn">Go Back</button> <!-- Button to go back to the homepage -->
+                    
+                </form>
+            </div>
+        </div>
+        <div class="animated-bg"></div>
+    </div>
+
+    <script src="contact.js"></script>
+</body>
+</html>
