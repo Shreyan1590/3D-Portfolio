@@ -159,10 +159,126 @@
   background-color: #ff6b6f;
   transform: scale(1.05);
 }
-  
-  footer {
+
+/* Icons container */
+.icons {
+  display: flex;
+  gap: 40px; /* Space between the icons */
+  justify-content: center; /* Center the icons */
+  margin-bottom: 50px; /* Position outside the footer */
+}
+
+.icon {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  cursor: pointer; /* Add pointer on hover */
+}
+
+.icon .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent; /* Transparent background */
+  border-radius: 5px;
+  transition: 0.3s;
+  transform: rotate(-35deg) skew(20deg);
+}
+
+.icon:hover .layer {
+  transform: rotate(-35deg) skew(20deg);
+}
+
+.icon .layer span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  transition: 0.3s;
+}
+
+.icon:hover .layer span:nth-child(1) {
+  opacity: 0.2;
+  transform: translate(5px, -5px);
+}
+
+.icon:hover .layer span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(10px, -10px);
+}
+
+.icon:hover .layer span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(15px, -15px);
+}
+
+.icon:hover .layer span:nth-child(4) {
+  opacity: 0.8;
+  transform: translate(20px, -20px);
+}
+
+/* Social Media Icon Colors */
+.icon .fab {
+  position: relative;
+  font-size: 30px;
+  line-height: 70px;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+/* Facebook original color */
+.icon .fab.fa-facebook-f {
+  color: #4267B2; /* Facebook blue */
+}
+
+/* Twitter original color */
+.icon .fab.fa-twitter {
+  color: #1DA1F2; /* Twitter blue */
+}
+
+/* Instagram original gradient color */
+.icon .fab.fa-instagram {
+  color: #E1306C; /* Instagram gradient pink */
+}
+
+/* LinkedIn original color */
+.icon .fab.fa-linkedin-in {
+  color: #0077B5; /* LinkedIn blue */
+}
+
+/* YouTube original color */
+.icon .fab.fa-youtube {
+  color: #FF0000; /* YouTube red */
+}
+
+.icon:hover .fab {
+  color: white; /* Change to white on hover */
+}
+
+.icon .text {
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: white; /* White text */
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.icon:hover .text {
+  opacity: 1;
+}
+
+footer {
     text-align: center;
     padding: 1rem;
+    padding-top: 35px;
     background: rgba(0, 0, 0, 0.7);
   }
   
