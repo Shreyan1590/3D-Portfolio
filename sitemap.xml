@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://3d-portfolio-shreyan.vercel.app/</loc>
+    <lastmod>2024-09-28</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Main Content (Replace with actual path if different) -->
+  <url>
+    <loc>https://3d-portfolio-shreyan.vercel.app/main-content.html</loc>
+    <lastmod>2024-09-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+  
+  <!-- About Section (Optional, add if it exists) -->
+  <url>
+    <loc>https://3d-portfolio-shreyan.vercel.app/about.html</loc>
+    <lastmod>2024-09-28</lastmod>
+    <priority>0.70</priority>
+  </url>
+  
+  <!-- Contact Page (Optional, add if it exists) -->
+  <url>
+    <loc>https://3d-portfolio-shreyan.vercel.app/contact.html</loc>
+    <lastmod>2024-09-28</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+</urlset>
